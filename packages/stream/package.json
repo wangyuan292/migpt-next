@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "@mi-gpt/stream",
   "description": "MiGPT 长文本自动分片 + 流式响应",
   "keywords": ["migpt"],

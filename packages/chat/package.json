@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "@mi-gpt/chat",
   "description": "MiGPT 对话模块",
   "keywords": ["migpt"],
