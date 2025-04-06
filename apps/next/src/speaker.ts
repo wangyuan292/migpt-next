@@ -13,7 +13,7 @@ class SpeakerManager implements ISpeaker {
       return MiService.MiNA.play({ url });
     }
     if (text) {
-      return MiService.MiNA.play({ tts: text });
+      return MiService.MiNA.play({ text });
     }
     return false;
   }

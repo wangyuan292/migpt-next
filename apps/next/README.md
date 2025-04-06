@@ -124,10 +124,10 @@ await MiGPT.start({
       await engine.speaker.play({ url: "https://example.com/hello.mp3" });
 
       // 调用 MiNA 的能力
-      await engine.MiNA?.setVolume(50);
+      await engine.MiNA.setVolume(50);
 
       // 调用 MioT 的能力
-      await engine.MiOT?.doAction(3, 1);
+      await engine.MiOT.doAction(3, 1);
 
       // 告诉 MiGPT 已经处理过这条消息了，不再使用默认的 AI 回复
       return { handled: true };

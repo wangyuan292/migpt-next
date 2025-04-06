@@ -22,7 +22,7 @@
     "@mi-gpt/chat": "workspace:*",
     "@mi-gpt/engine": "workspace:*",
     "@mi-gpt/utils": "workspace:*",
-    "mi-service-lite": "^3.1.0"
+    "@mi-gpt/miot": "workspace:*"
   },
   "devDependencies": {
     "@mi-gpt/config": "workspace:*",

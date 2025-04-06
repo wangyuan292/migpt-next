@@ -35,17 +35,19 @@ class MiJiaEngine extends MiGPTEngine {
   speaker = MiSpeaker;
 
   get MiNA() {
-    return MiService.MiNA;
+    return MiService.MiNA!;
   }
 
   get MiOT() {
-    return MiService.MiOT;
+    return MiService.MiOT!;
   }
 
   async start(config: MiGPTConfig) {
     await super.start(deepMerge(kDefaultMiGPTConfig, config));
 
     await MiService.init(this.config as any);
+
+    console.log('✅ 服务已启动...');
 
     // 轮询间隔最小 1 秒
     const heartbeat = Math.max(1000, this.config.speaker!.heartbeat!);
