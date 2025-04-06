@@ -1,5 +1,11 @@
 # @mi-gpt/engine
 
+## 1.1.1
+
+### Patch Changes
+
+- f9df4ab: 修复 stream 读取异常的问题
+
 ## 1.1.0
 
 ### Minor Changes

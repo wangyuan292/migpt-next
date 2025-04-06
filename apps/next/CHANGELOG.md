@@ -1,5 +1,12 @@
 # @mi-gpt/next
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [f9df4ab]
+  - @mi-gpt/engine@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
