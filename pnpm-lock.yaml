@@ -36,6 +36,9 @@ importers:
       '@mi-gpt/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@types/node':
+        specifier: ^22.14.0
+        version: 22.14.0
       tsx:
         specifier: ^4.19.3
         version: 4.19.3

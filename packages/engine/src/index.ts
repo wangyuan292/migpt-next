@@ -122,7 +122,7 @@ export abstract class MiGPTEngine extends BaseEngine {
 
     while (true) {
       const { next, noMore } = stream!.read();
-      if (noMore) {
+      if (!next && noMore) {
         break;
       }
       if (next) {
