@@ -37,8 +37,8 @@ MiGPT 公共配置
 ## tsup.config.ts
 
 ```typescript
-import { baseConfig } from '@mi-gpt/config/tsup';
-import { defineConfig } from 'tsup';
+import { baseConfig } from "@mi-gpt/config/tsup";
+import { defineConfig } from "tsup";
 
 export default defineConfig({
   ...baseConfig,

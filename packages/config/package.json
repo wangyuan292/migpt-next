@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.0.1",
   "name": "@mi-gpt/config",
   "description": "MiGPT 公共配置",
   "keywords": ["migpt"],
