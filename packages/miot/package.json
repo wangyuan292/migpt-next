@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0",
   "name": "@mi-gpt/miot",
   "description": "MIoT 非官方 Node.js 客户端",
   "keywords": ["migpt", "miot"],

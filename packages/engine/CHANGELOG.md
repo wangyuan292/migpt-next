@@ -1,5 +1,11 @@
 # @mi-gpt/engine
 
+## 1.1.0
+
+### Minor Changes
+
+- ef39483: 修复一些已知问题
+
 ## 1.0.0
 
 ### Major Changes
