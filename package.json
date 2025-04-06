@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo run build",
     "postinstall": "[ -n \"$CI\" ] || lefthook install",
-    "publish-packages": "changeset version && turbo run build &&  changeset publish"
+    "publish-packages": "changeset version && turbo run build && changeset publish && git push --follow-tags"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
