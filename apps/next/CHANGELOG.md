@@ -1,5 +1,19 @@
 # @mi-gpt/next
 
+## 1.2.0
+
+### Minor Changes
+
+- 6316c14: 支持 CJS
+
+### Patch Changes
+
+- Updated dependencies [6316c14]
+  - @mi-gpt/chat@1.1.0
+  - @mi-gpt/engine@1.2.0
+  - @mi-gpt/miot@1.1.0
+  - @mi-gpt/utils@1.1.0
+
 ## 1.1.1
 
 ### Patch Changes
