@@ -6,7 +6,7 @@ export const baseConfig: Options = {
   outDir: 'dist',
   target: 'node16',
   platform: 'node',
-  format: ['esm'],
+  format: ['esm', 'cjs'],
   sourcemap: false,
   treeshake: true,
   minify: false,

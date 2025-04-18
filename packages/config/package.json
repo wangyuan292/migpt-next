@@ -9,9 +9,19 @@
   },
   "files": ["dist", "assets"],
   "exports": {
-    "./biome": "./assets/biome.json",
-    "./typescript": "./assets/typescript.json",
-    "./tsup": "./dist/tsup.config.js"
+    "./biome": {
+      "require": "./assets/biome.json",
+      "import": "./assets/biome.json"
+    },
+    "./typescript": {
+      "require": "./assets/typescript.json",
+      "import": "./assets/typescript.json"
+    },
+    "./tsup": {
+      "types": "./dist/tsup.config.d.ts",
+      "require": "./dist/tsup.config.cjs",
+      "import": "./dist/tsup.config.js"
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
