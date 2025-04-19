@@ -30,6 +30,7 @@ async function main() {
     prompt: {
       system: "你是一个智能助手，请根据用户的问题给出回答。",
     },
+    callAIKeywords: ["请", "你"],
     async onMessage(_engine, { text }) {
       if (text.startsWith("你好")) {
         return { text: "你好，很高兴认识你！" };
@@ -103,6 +104,16 @@ await MiGPT.start({
 
 ```typescript
 await MiGPT.start({
+  /**
+   * 默认只会处理以下关键词开头的消息，你也可以自定义：
+   * 
+   * - 请问地球为什么是圆的？
+   * - 你知道世界上跑的最快的动物是什么吗？
+   */
+  callAIKeywords: ["请", "你"],
+  /**
+   * 自定义消息回复
+   */
   async onMessage(engine, { text }) {
     if (text.startsWith("你好")) {
       // 回复文字
