@@ -1,6 +1,8 @@
 # MiGPT-Next
 
-让小爱音箱「听你的」，解锁无限可能。
+`MiGPT-Next` 是基于 [MiGPT](https://github.com/idootop/mi-gpt) 的升级版本，支持**​ 自定义消息回复 ​**。
+
+让人人都可以轻松定制自己的小爱音箱回复，让小爱音箱「听你的」。
 
 ## 快速开始
 
@@ -47,14 +49,15 @@ main();
 
 ## 相关说明
 
-本项目 `MiGPT-Next` 是基于 [MiGPT](https://github.com/idootop/mi-gpt) 的升级版本，支持**​自定义消息回复​**，方便第三方开发者自定义消息处理逻辑，比如接入互联网搜索、天气查询、Webhook 等。
+`MiGPT-Next` 的实现方式和 `MiGPT` 相同，都是走 API 请求：
+   - 响应延迟较大，难以打断小爱原有回复
+   - TTS 偶发失效，设备状态获取失败可能导致回复中断
 
-⚠️ 注意：`MiGPT-Next` 仍存在与 `MiGPT` 相同的问题：
+基于上述原因，在新版 `MiGPT-Next` 中移除了对**连续对话**/流式响应功能的支持。
 
-- 响应延迟较大，难以打断小爱原有回复
-- TTS 偶发失效，设备状态获取失败可能导致回复中断
+如果你想要实现近乎完美的体验，可以选择将小爱音箱刷机。
 
-如果你想要实现近乎完美的体验，则需要将小爱音箱刷机。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
+相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
 
 ## 免责声明
 
