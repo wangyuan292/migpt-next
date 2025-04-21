@@ -1,5 +1,13 @@
 # @mi-gpt/openai
 
+## 1.1.1
+
+### Patch Changes
+
+- 87df900: 修复配置参数 deepMerge 异常的问题
+- Updated dependencies [87df900]
+  - @mi-gpt/utils@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
