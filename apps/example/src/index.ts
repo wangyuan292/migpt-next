@@ -15,6 +15,7 @@ async function main() {
     prompt: {
       system: '你是一个智能助手，请根据用户的问题给出回答。',
     },
+    callAIKeywords: ['请', '你'],
     async onMessage(_engine, { text }) {
       if (text.startsWith('你好')) {
         return { text: '你好，很高兴认识你！' };

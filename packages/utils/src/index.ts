@@ -143,7 +143,13 @@ export function deepMerge<T extends object>(target: T, source: Partial<T> = {}):
         typeof sourceValue === 'object' &&
         typeof targetValue === 'object'
       ) {
-        result[key] = deepMerge(targetValue, sourceValue);
+        if (Array.isArray(sourceValue)) {
+          result[key] = [...sourceValue] as any;
+        } else if (Array.isArray(targetValue)) {
+          result[key] = [...targetValue] as any;
+        } else {
+          result[key] = deepMerge(targetValue as object, sourceValue as object) as any;
+        }
       } else if (sourceValue !== undefined) {
         result[key] = sourceValue as any;
       }
