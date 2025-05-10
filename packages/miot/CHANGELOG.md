@@ -1,5 +1,11 @@
 # @mi-gpt/miot
 
+## 1.2.1
+
+### Patch Changes
+
+- 7a49b6a: fix: passToken config
+
 ## 1.2.0
 
 ### Minor Changes
