@@ -4,7 +4,6 @@
 
 让人人都可以轻松定制自己的小爱音箱回复，让小爱音箱「听你的」。
 
-## 快速开始
 
 ## Docker
 
@@ -21,7 +20,7 @@ cd migpt-next/apps/example
 docker run -it --rm -v $(pwd)/config.js:/app/config.js idootop/migpt-next:latest
 ```
 
-### Node.js
+## Node.js
 
 [![npm version](https://badge.fury.io/js/@mi-gpt%2Fnext.svg)](https://www.npmjs.com/package/@mi-gpt/next)
 
