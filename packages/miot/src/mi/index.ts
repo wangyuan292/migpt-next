@@ -21,6 +21,12 @@ export async function getMiService(config: {
 }) {
   const { service, relogin, ...rest } = config;
   const overrides: any = relogin ? {} : rest;
+  if (overrides.passToken) {
+    overrides.pass = {
+      ...overrides.pass,
+      passToken: overrides.passToken,
+    };
+  }
   const randomDeviceId = `android_${uuid()}`;
   const store: Store = (await readJSON(kConfigFile)) ?? {};
   let account = {

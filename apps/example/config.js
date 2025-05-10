@@ -26,7 +26,7 @@ export default {
      *
      * 获取教程：https://github.com/idootop/migpt-next/issues/4
      */
-    // passToken: "xxxxxxxxx", // 👈 使用时记得取消最前面的 // 注释
+    passToken: 'xxxxxxxxx',
   },
   openai: {
     /**
