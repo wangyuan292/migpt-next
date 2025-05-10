@@ -8,21 +8,27 @@ export { MiNA, MIoT };
 
 export interface MiServiceConfig {
   /**
+   * 小爱音箱在米家中设置的名称
+   *
+   * 如果提示找不到设备，请打开 debug 选项获取设备真实的 name、miotDID 或 mac 地址填入
+   */
+  did: string;
+  /**
    * 小米 ID（一串数字）
    *
    * 注意：不是手机号或邮箱，请在小米账号「个人信息」-「小米 ID」查看
    */
-  userId: string;
+  userId?: string;
   /**
    * 小米账号密码
    */
-  password: string;
+  password?: string;
   /**
-   * 小爱音箱在米家中设置的名称
+   * 小米账号 passToken
    *
-   * 如果提示找不到设备，请打开 debug 选项获取设备真实 did
+   * 获取教程：https://github.com/idootop/migpt-next/issues/4
    */
-  did?: string;
+  passToken?: string;
   /**
    * 是否开启调试模式
    *

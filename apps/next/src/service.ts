@@ -17,7 +17,11 @@ class _MiService {
   async init(config: { debug: boolean; speaker: MiServiceConfig }) {
     const { debug = false, speaker } = config;
 
-    assert(!!speaker.userId && !!speaker.password && !!speaker.did, '❌ Speaker 缺少必要参数');
+    assert(!!speaker.did, '❌ Speaker 缺少 did 参数');
+    assert(
+      !!speaker.passToken || (!!speaker.userId && !!speaker.password),
+      '❌ Speaker 缺少 passToken 或 userId 和 password',
+    );
 
     speaker.debug = debug;
     speaker.timeout = Math.max(1000, speaker.timeout ?? 5000);
@@ -25,10 +29,7 @@ class _MiService {
     this.MiNA = await getMiNA(speaker);
     this.MiOT = await getMIoT(speaker);
 
-    assert(
-      !!this.MiNA && !!this.MiOT,
-      '❌ 初始化 Mi Services 失败\n💡 提示：打开 debug 选项可获取设备真实 did',
-    );
+    assert(!!this.MiNA && !!this.MiOT, '❌ 初始化 Mi Services 失败');
 
     if (debug) {
       const device: any = this.MiOT!.account?.device;

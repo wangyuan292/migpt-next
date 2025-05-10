@@ -25,7 +25,7 @@ export class MiNA {
       console.log('🐛 MiNA 设备列表: ', jsonEncode(devices, { prettier: true }));
     }
     const device = (devices ?? []).find((e: any) =>
-      [e.deviceID, e.miotDID, e.name, e.alias].includes(account.did),
+      [e.deviceID, e.miotDID, e.name, e.alias, e.mac].includes(account.did),
     );
     if (device) {
       account.device = { ...device, deviceId: device.deviceID };

@@ -25,7 +25,9 @@ export class MIoT {
     if (Debugger.debug) {
       console.log('🐛 MIoT 设备列表: ', jsonEncode(devices, { prettier: true }));
     }
-    const device = (devices?.list ?? []).find((e: any) => [e.did, e.name].includes(account.did));
+    const device = (devices?.list ?? []).find((e: any) =>
+      [e.did, e.name, e.mac].includes(account.did),
+    );
     if (device) {
       account.device = device;
     }

@@ -39,6 +39,11 @@ export async function getAccount(_account: MiAccount): Promise<MiAccount | undef
     }
     pass = parseAuthPass(res);
   }
+  if (pass.notificationUrl?.includes('identity/authStart')) {
+    console.error('❌ 本次登录需要验证码，请使用 passToken 重新登录');
+    console.log('💡 获取 passToken 教程：https://github.com/idootop/migpt-next/issues/4');
+    return undefined;
+  }
   if (!pass.location || !pass.nonce || !pass.passToken) {
     console.error('❌ 登录失败，请检查你的账号密码是否正确', res);
     return undefined;
@@ -55,6 +60,9 @@ export async function getAccount(_account: MiAccount): Promise<MiAccount | undef
     console.error(`❌ 找不到设备：${account.did}`);
     console.log(
       '🐛 请检查你的 did 与米家中的设备名称是否一致。注意错别字、空格和大小写，比如：音响 👉 音箱',
+    );
+    console.log(
+      '💡 建议打开 debug 选项，查看目标设备的真实 name、miotDID 或 mac 地址，更新 did 参数',
     );
     return undefined;
   }

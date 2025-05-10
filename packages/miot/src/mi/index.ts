@@ -15,11 +15,12 @@ export async function getMiService(config: {
   service: 'miot' | 'mina';
   userId?: string;
   password?: string;
+  passToken?: string;
   did?: string;
   relogin?: boolean;
 }) {
-  const { service, userId, password, did, relogin } = config;
-  const overrides: any = relogin ? {} : { did, userId, password };
+  const { service, relogin, ...rest } = config;
+  const overrides: any = relogin ? {} : rest;
   const randomDeviceId = `android_${uuid()}`;
   const store: Store = (await readJSON(kConfigFile)) ?? {};
   let account = {
@@ -28,7 +29,7 @@ export async function getMiService(config: {
     ...overrides,
     sid: service === 'miot' ? 'xiaomiio' : 'micoapi',
   };
-  if (!account.userId || !account.password) {
+  if (!account.passToken && (!account.userId || !account.password)) {
     console.error('❌ 没有找到账号或密码，请检查是否已配置相关参数：userId, password');
     return;
   }
