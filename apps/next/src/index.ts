@@ -7,7 +7,7 @@ import { MiMessage } from './message.js';
 import { MiService, type MiServiceConfig } from './service.js';
 import { MiSpeaker } from './speaker.js';
 
-type MiGPTConfig = Prettify<
+export type MiGPTConfig = Prettify<
   EngineConfig<MiJiaEngine> &
     DeepPartial<{
       debug: boolean;
