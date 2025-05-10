@@ -1,5 +1,0 @@
-{
-  "extends": "@mi-gpt/config/typescript",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
-}

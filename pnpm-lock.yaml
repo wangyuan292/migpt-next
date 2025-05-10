@@ -30,12 +30,12 @@ importers:
   apps/example:
     dependencies:
       '@mi-gpt/next':
-        specifier: workspace:*
-        version: link:../next
+        specifier: 1.2.1
+        version: 1.2.1
     devDependencies:
       '@mi-gpt/config':
-        specifier: workspace:*
-        version: link:../../packages/config
+        specifier: 1.1.0
+        version: 1.1.0
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
@@ -508,6 +508,38 @@ packages:
 
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
+
+  '@mi-gpt/chat@1.1.1':
+    resolution: {integrity: sha512-C5b498nGC1ZAg6/Nl5XWneOwnUQ9CgK+0wCEqNDHYkj96YWqpbW3uGS6ubgNncpVMg/uXMoc55l1hsUF0lz+oQ==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/config@1.1.0':
+    resolution: {integrity: sha512-o24iFINsoDuvInnMpfBQ4zCuTObbdodjXyizXmxl3yyYOMjmIAXizO/1UZ9/dv3UVTov3sjL09aCGuBeIVhvtA==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/engine@1.2.1':
+    resolution: {integrity: sha512-EmBVS/l1xj8N54ZHRmYcV0jl9vh0QBPsyMdjwmS5h9+cdG40ItUq+shVg9ZHJrwoixKIiagYJ4lAjw+yUQ1DUQ==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/miot@1.1.1':
+    resolution: {integrity: sha512-KfpDeiui/gxEOO4mJ/apmedTyArbWr6a0tlCOlETlqk7lRGshhTeorgyA07Do1QDGWWkJ78WzeihuAZEWo8RRw==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/next@1.2.1':
+    resolution: {integrity: sha512-x2Ij8oJy5ZsGRsvZTRLP7k8pFwUKZzqzxPgd8XTLKgAMYpFi70x2NfQ0OMOeXor8pkOFjJq4pJ2zTmRCMa3dzg==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/openai@1.1.1':
+    resolution: {integrity: sha512-pEs9y/GMY/ZDmlFfcBuowuvyE+j3cTKeQY0cMhZ9AobXD/qGNWlP7gQXojsSbVg/D0bB2snhEiWv/X5s1EzJWg==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/stream@1.1.1':
+    resolution: {integrity: sha512-4zd8brCqGX05tStweUWFdeE4EVpZGtFXHfvfYqvdJWccFK4PZkW3ynvJ0lc4N8SdsJo5Ml6XxOftRpZUnfGJtg==}
+    engines: {node: '>=16'}
+
+  '@mi-gpt/utils@1.1.1':
+    resolution: {integrity: sha512-FiGHV2RDBRGE/Xb9Q5H757t3ZqOpo6gL+44VXiRxQb3fQiapOpn038RAWErHJYZajYzkxP2jl8Wggsb+wp77Zg==}
+    engines: {node: '>=16'}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1863,6 +1895,69 @@ snapshots:
       fs-extra: 8.1.0
       globby: 11.1.0
       read-yaml-file: 1.1.0
+
+  '@mi-gpt/chat@1.1.1':
+    dependencies:
+      '@mi-gpt/openai': 1.1.1
+      '@mi-gpt/stream': 1.1.1
+      '@mi-gpt/utils': 1.1.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+      - ws
+      - zod
+
+  '@mi-gpt/config@1.1.0': {}
+
+  '@mi-gpt/engine@1.2.1':
+    dependencies:
+      '@mi-gpt/chat': 1.1.1
+      '@mi-gpt/openai': 1.1.1
+      '@mi-gpt/stream': 1.1.1
+      '@mi-gpt/utils': 1.1.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+      - ws
+      - zod
+
+  '@mi-gpt/miot@1.1.1':
+    dependencies:
+      '@mi-gpt/utils': 1.1.1
+      axios: 1.8.4
+      pako: 2.1.0
+    transitivePeerDependencies:
+      - debug
+
+  '@mi-gpt/next@1.2.1':
+    dependencies:
+      '@mi-gpt/chat': 1.1.1
+      '@mi-gpt/engine': 1.2.1
+      '@mi-gpt/miot': 1.1.1
+      '@mi-gpt/utils': 1.1.1
+    transitivePeerDependencies:
+      - debug
+      - encoding
+      - supports-color
+      - ws
+      - zod
+
+  '@mi-gpt/openai@1.1.1':
+    dependencies:
+      '@mi-gpt/utils': 1.1.1
+      openai: 4.91.1
+      proxy-agent: 6.5.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+      - ws
+      - zod
+
+  '@mi-gpt/stream@1.1.1':
+    dependencies:
+      '@mi-gpt/utils': 1.1.1
+
+  '@mi-gpt/utils@1.1.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

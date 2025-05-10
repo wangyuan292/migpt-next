@@ -3,16 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "tsx src/index.ts"
+    "start": "node app.js"
   },
   "dependencies": {
-    "@mi-gpt/next": "workspace:*"
-  },
-  "devDependencies": {
-    "@mi-gpt/config": "workspace:*",
-    "@types/node": "^22.14.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "@mi-gpt/next": "1.2.1"
   },
   "engines": {
     "node": ">=16"
