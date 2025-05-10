@@ -6,13 +6,30 @@
 
 ## 快速开始
 
-### 1. 安装依赖
+## Docker
+
+[![Docker Image Version](https://img.shields.io/docker/v/idootop/migpt-next?color=%23086DCD&label=docker%20image)](https://hub.docker.com/r/idootop/migpt-next)
+
+```shell
+# 克隆代码
+git clone https://github.com/idootop/migpt-next.git
+
+# 进入配置文件所在目录，然后修改 config.js 里的账号密码
+cd migpt-next/apps/example
+
+# 运行 Docker
+docker run -it --rm -v $(pwd)/config.js:/app/config.js idootop/migpt-next:latest
+```
+
+### Node.js
+
+[![npm version](https://badge.fury.io/js/@mi-gpt%2Fnext.svg)](https://www.npmjs.com/package/@mi-gpt/next)
+
+首先，在你的项目里安装 `@mi-gpt/next` 依赖
 
 ```shell
 pnpm install @mi-gpt/next
 ```
-
-### 2. 运行
 
 完整的使用教程和参数配置 👉 请到[此处查看](apps/next/README.md)。
 
@@ -50,8 +67,9 @@ main();
 ## 相关说明
 
 `MiGPT-Next` 的实现方式和 `MiGPT` 相同，都是走 API 请求：
-   - 响应延迟较大，难以打断小爱原有回复
-   - TTS 偶发失效，设备状态获取失败可能导致回复中断
+
+- 响应延迟较大，难以打断小爱原有回复
+- TTS 偶发失效，设备状态获取失败可能导致回复中断
 
 基于上述原因，在新版 `MiGPT-Next` 中移除了对**连续对话**/流式响应功能的支持。
 
@@ -62,9 +80,9 @@ main();
 ## 免责声明
 
 1. **适用范围**
-   本项目为非盈利开源项目，仅限于技术原理研究、安全漏洞验证及非营利性个人使用。严禁用于商业服务、网络攻击、数据窃取、系统破坏等违反《网络安全法》及使用者所在地司法管辖区的法律规定的场景。
+   本项目为开源非营利项目，仅供学术研究或个人测试用途。严禁用于商业服务、网络攻击、数据窃取、系统破坏等违反《网络安全法》及使用者所在地司法管辖区的法律规定的场景。
 2. **非官方声明**
-   本项目由第三方开发者独立开发，与小米集团及其关联方（下称"权利方"）无任何隶属/合作关系，未获其官方授权/认可或技术支持。项目中涉及的商标、固件、云服务的所有权利归属小米集团。若权利方主张权益，使用者应立即主动停止使用并删除本项目。
+   本项目由第三方开发者独立开发，与小米集团及其关联方（下称"权利方"）无任何隶属/合作关系，亦未获其官方授权/认可或技术支持。项目中涉及的商标、固件、云服务的所有权利归属小米集团。若权利方主张权益，使用者应立即主动停止使用并删除本项目。
 
 继续下载或运行本项目，即表示您已完整阅读并同意[用户协议](agreement.md)，否则请立即终止使用并彻底删除本项目。
 
