@@ -1,5 +1,11 @@
 # @mi-gpt/miot
 
+## 1.2.0
+
+### Minor Changes
+
+- 4f5990a: 1. 支持使用 passToken 登录 2. 导出 MiGPTConfig 类型
+
 ## 1.1.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @mi-gpt/next
 
+## 1.3.0
+
+### Minor Changes
+
+- 4f5990a: 1. 支持使用 passToken 登录 2. 导出 MiGPTConfig 类型
+
+### Patch Changes
+
+- Updated dependencies [4f5990a]
+  - @mi-gpt/miot@1.2.0
+
 ## 1.2.1
 
 ### Patch Changes
