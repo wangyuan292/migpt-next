@@ -4,23 +4,52 @@
 
 让人人都可以轻松定制自己的小爱音箱回复，让小爱音箱「听你的」。
 
-
-## Docker
+## Docker 运行
 
 [![Docker Image Version](https://img.shields.io/docker/v/idootop/migpt-next?color=%23086DCD&label=docker%20image)](https://hub.docker.com/r/idootop/migpt-next)
+
+首先，克隆仓库代码到本地。
 
 ```shell
 # 克隆代码
 git clone https://github.com/idootop/migpt-next.git
 
-# 进入配置文件所在目录，然后修改 config.js 里的账号密码
+# 进入配置文件所在目录
 cd migpt-next/apps/example
+```
 
-# 运行 Docker
+然后把 `config.js` 文件里的配置修改成你自己的。
+
+```js
+export default {
+  speaker: {
+    userId: "123456",
+    password: "xxxxxxxx",
+    did: "Xiaomi 智能音箱 Pro",
+  },
+  openai: {
+    model: "gpt-4.1-mini",
+    baseURL: "https://api.openai.com/v1",
+    apiKey: "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  },
+  prompt: {
+    system: "你是一个智能助手，请根据用户的问题给出回答。",
+  },
+  async onMessage(engine, { text }) {
+    if (text === "测试") {
+      return { text: "你好，很高兴认识你！" };
+    }
+  },
+};
+```
+
+修改好 `config.js` 配置文件之后，Docker 一键运行。
+
+```shell
 docker run -it --rm -v $(pwd)/config.js:/app/config.js idootop/migpt-next:latest
 ```
 
-## Node.js
+## Node.js 运行
 
 [![npm version](https://badge.fury.io/js/@mi-gpt%2Fnext.svg)](https://www.npmjs.com/package/@mi-gpt/next)
 
@@ -50,9 +79,8 @@ async function main() {
     prompt: {
       system: "你是一个智能助手，请根据用户的问题给出回答。",
     },
-    callAIKeywords: ["请", "你"],
-    async onMessage(_engine, { text }) {
-      if (text.startsWith("你好")) {
+    async onMessage(engine, { text }) {
+      if (text === "测试") {
         return { text: "你好，很高兴认识你！" };
       }
     },
