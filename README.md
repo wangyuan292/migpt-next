@@ -100,9 +100,8 @@ main();
 
 基于上述原因，在新版 `MiGPT-Next` 中移除了对**连续对话**/流式响应功能的支持。
 
-如果你想要实现近乎完美的体验，可以选择将小爱音箱刷机。
-
-相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
+> [!TIP]
+> 如果你想要实现近乎完美的体验，可以选择将小爱音箱刷机。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
 
 ## 免责声明
 
