@@ -20,6 +20,9 @@ cd migpt-next/apps/example
 
 然后把 `config.js` 文件里的配置修改成你自己的。
 
+> [!TIP]
+> 完整的参数配置（如自定义大模型请求 headers 等） 👉 请到[此处](apps/next/README.md)查看。
+
 ```js
 export default {
   speaker: {
@@ -58,8 +61,6 @@ docker run -it --rm -v $(pwd)/config.js:/app/config.js idootop/migpt-next:latest
 ```shell
 pnpm install @mi-gpt/next
 ```
-
-完整的使用教程和参数配置 👉 请到[此处查看](apps/next/README.md)。
 
 ```typescript
 import { MiGPT } from "@mi-gpt/next";
