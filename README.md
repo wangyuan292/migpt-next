@@ -100,15 +100,15 @@ main();
 
 ### Q：小爱同学总是抢话，能不能在 AI 回答的时候让小爱同学闭嘴？
 
-不可以，需要刷机才能解决。`MiGPT-Next` 的实现方式和 `MiGPT` 相同，都是走 API 请求：
+> [!TIP]
+> 如果你想要让小爱同学立即闭嘴，必须要刷机才能解决。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
+
+`MiGPT-Next` 的实现方式和 `MiGPT` 相同，都是走 API 请求：
 
 - 响应延迟较大，难以打断小爱原有回复
 - TTS 偶发失效，设备状态获取失败可能导致回复中断
 
 基于上述原因，在新版 `MiGPT-Next` 中移除了对**连续对话**/流式响应功能的支持。
-
-> [!TIP]
-> 如果你想要让小爱同学立即闭嘴，必须要刷机才能解决。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
 
 ### Q：控制台能看到 AI 的回答文字，但是播放的还是小爱自己的回答？
 
