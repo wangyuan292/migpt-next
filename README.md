@@ -108,7 +108,7 @@ main();
 基于上述原因，在新版 `MiGPT-Next` 中移除了对**连续对话**/流式响应功能的支持。
 
 > [!TIP]
-> 如果你想要让小爱同学立即闭嘴，实现近乎完美的体验，必须要将小爱音箱刷机。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
+> 如果你想要让小爱同学立即闭嘴，必须要刷机才能解决。相关教程请移步 👉 [Open-XiaoAI](https://github.com/idootop/open-xiaoai)
 
 ### Q：控制台能看到 AI 的回答文字，但是播放的还是小爱自己的回答？
 
